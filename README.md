@@ -5,17 +5,17 @@ Este projeto é um gerenciador de clientes desenvolvido como parte de um teste t
 Funcionalidades Principais
 Usuários Anônimos
 
-Listagem de Clientes:lista de todos os clientes disponíveis na plataforma.
-<img src="/frontend/images/listagemuol.png.png" />
-
-
 Criação de Clientes: é possivel fazer a criação de novos clientes ao sistema.
 
 <img src="/frontend/images/criaruol.png" />
 
+Listagem de Clientes:lista de todos os clientes disponíveis na plataforma.
+<img src="/frontend/images/listagemuol.png"/>
+
+
 Edição de Clientes: Permite a edição dos dados dos clientes existentes.
 
-<img src="/frontend/images/editaruol.png.png"/>
+<img src="/frontend/images/editaruol.png"/>
 
 Validação de Dados: O sistema não permite a criação ou edição de clientes se os campos de CPF ou telefone forem preenchidos incorretamente.
 Tecnologias Utilizadas
