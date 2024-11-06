@@ -68,4 +68,20 @@ router.put('/:id', async (req, res) => {
     }
 });
 
+router.delete('/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+        const cliente = await Cliente.findByPk(id);
+        if (cliente) {
+            await cliente.destroy();
+            res.status(200).json({ message: "Cliente excluído com sucesso" });
+        } else {
+            res.status(404).json({ message: "Cliente não encontrado" });
+        }
+    } catch (error) {
+        console.error("Erro ao excluir cliente:", error);
+        res.status(500).json({ message: "Erro ao excluir cliente" });
+    }
+});
+
 module.exports = router;

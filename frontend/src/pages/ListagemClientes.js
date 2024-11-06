@@ -24,6 +24,22 @@ const ListagemClientes = () => {
         }
     };
 
+    const excluirCliente = async (id) => {
+        try {
+            const response = await fetch(`http://localhost:3001/api/clientes/${id}`, {
+                method: 'DELETE',
+            });
+
+            if (response.ok) {
+                setClientes(clientes.filter(cliente => cliente.id !== id));
+            } else {
+                console.error('Erro ao excluir cliente');
+            }
+        } catch (error) {
+            console.error('Erro ao excluir cliente:', error);
+        }
+    };
+
     const tratarStatus = (status) => {
         if (!status) return 'Desconhecido';
         return status.charAt(0).toUpperCase() + status.slice(1);
@@ -77,6 +93,12 @@ const ListagemClientes = () => {
                                 </td>
                                 <td>
                                     <Link to={`/editar/${cliente.id}`} className="btn btn-warning">Editar</Link>
+                                    <button 
+                                        onClick={() => excluirCliente(cliente.id)} 
+                                        className="btn btn-danger ms-2"
+                                    >
+                                        Excluir
+                                    </button>
                                 </td>
                             </tr>
                         ))
