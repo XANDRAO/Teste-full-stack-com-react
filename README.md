@@ -10,7 +10,7 @@ Criação de Clientes: é possivel fazer a criação de novos clientes ao sistem
 <img src="/frontend/images/criaruol.png" />
 
 Listagem de Clientes:lista de todos os clientes disponíveis na plataforma.
-<img src="/frontend/images/listageuol.png.png"/>
+<img src="/frontend/images/listageuol.png"/>
 
 
 Edição de Clientes: Permite a edição dos dados dos clientes existentes.
